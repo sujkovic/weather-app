@@ -10,13 +10,7 @@ renderHeader();
 renderBody();
 renderFooter();
 
-
-function updateWeather() {
-    //  TODO - update the dom elements wit current city weather
-}
-
-
-//  debuggin 
-setTimeout(() => {
-    console.log(window.globalWeatherData.main.temp);
-}, 1000);
+//  Future TODO's
+//  add celcius button(make global bool, in kToF func make ternary operator)
+//  figure out wind format and add it in format 'Wind SE at 6mph' (i believe its in m/s)
+//  add sunrise/sunset (convert from unix time)

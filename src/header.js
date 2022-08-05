@@ -1,5 +1,4 @@
 import createDomElement from "./createDomElement";
-import kToF from "./kToF";
 import getWeather from "./weatherData";
 
 const renderHeader = () => {
@@ -10,11 +9,18 @@ const renderHeader = () => {
     let right = createDomElement('div', 'headerRight');
     let searchBar = createDomElement('input', 'searchBar');
     let searchBtn = createDomElement('button', 'searchBtn', 'Search');
-    searchBar.addEventListener('click', () => {
-        getWeather(`${searchBar.value}`);
-        document.querySelector('.mainTemp').textContent = kToF(window.globalWeatherData.main.temp);
+    searchBtn.addEventListener('click', () => {
+        getWeather(searchBar.value);
+        searchBar.value = '';
     });
-    searchBar.placeholder = 'Enter any city or zipcode';
+    searchBar.addEventListener('keypress', () => {
+        if (event.key === 'Enter') {
+            getWeather(searchBar.value);
+            searchBar.value = '';
+            searchBar.blur();
+        }
+    });
+    searchBar.placeholder = 'Enter any city name';
     middle.append(searchBar);
     middle.append(searchBtn);
     header.append(left);
