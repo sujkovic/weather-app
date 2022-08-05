@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    --background-color: rgba(66, 66, 66, 0.311);
+    --text-color: rgba(255, 255, 255, 0.765);
+}
+
+html {
+    font-size: 22px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url('./assets/sunny.jpg');
+    color: var(--text-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 16px 32px;
+    background-color: var(--background-color);
+}
+
+header:nth-child(1) div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+header input {
+    font-size: 1rem;
+    height: 18px;
+    width: 30vw;
+    padding: 10px;
+}
+
+header button {
+    font-size: .8rem;
+    height: 32px;
+    width: 80px;
+}
+
+.bodyWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.mainTemp {
+    font-size: 100px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+.clear {
+    
+}
