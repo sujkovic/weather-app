@@ -5,9 +5,9 @@ import getWeather from "./weatherData";
 const renderHeader = () => {
     let body = document.querySelector('body');
     let header = document.createElement('header');
-    let left = createDomElement('div', 'headerLeft', 'left');
+    let left = createDomElement('div', 'headerLeft');
     let middle = createDomElement('div', 'headerMiddle');
-    let right = createDomElement('div', 'headerRight', 'right');
+    let right = createDomElement('div', 'headerRight');
     let searchBar = createDomElement('input', 'searchBar');
     let searchBtn = createDomElement('button', 'searchBtn', 'Search');
     searchBar.addEventListener('click', () => {
